@@ -8,10 +8,45 @@ body {
   background-color: #0f171e;
 }
 .nav-link {
-  line-height: 35px;
+  line-height: 25px;
   font-size: 17px;
   padding-bottom: 1px;
+  padding-top: 1px;
 }
 .active {
   border-bottom: 2px solid white;
+}
+.form-inline input {
+  background: transparent;
+}
+.form-inline input:focus {
+  background: transparent;
+}
+.input-group-text {
+  height: 38.5px;
+  padding: 6px 12px;
+  margin-top: 24px;
+  background: transparent;
+  border-right: 0;
+}
+.form-control {
+  border-left: 0px;
+}
+.parent {
+  display: flex;
+}
+.child1 {
+  flex: 0.68;
+}
+.child2 {
+  flex: 0.32;
+}
+.userIcon {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.userName {
+  margin-top: 39px;
+  margin-left: 10px;
 }
