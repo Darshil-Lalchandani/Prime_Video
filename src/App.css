@@ -6,12 +6,30 @@ body {
 }
 .navbar {
   background-color: #0f171e;
+  max-height: 66px;
+  padding-left: 0;
 }
 .nav-link {
-  line-height: 25px;
   font-size: 17px;
   padding-bottom: 1px;
   padding-top: 1px;
+}
+@media only screen and (max-width:850px) {
+  .navbar a, .navbar p{
+    font-size: 14px;
+  }
+  .search {
+    max-width: 10px;
+    padding-right: 0px;
+  }
+}
+@media (max-width: 575px) {
+  .navbar-collapse
+    {
+        background-color:#0f171e;
+        min-width: 100vw;
+        margin-left: 0;
+    }
 }
 .active {
   border-bottom: 2px solid white;
@@ -32,15 +50,6 @@ body {
 .form-control {
   border-left: 0px;
 }
-.parent {
-  display: flex;
-}
-.child1 {
-  flex: 0.68;
-}
-.child2 {
-  flex: 0.32;
-}
 .userIcon {
   font-size: 25px;
   margin-top: 20px;
@@ -49,4 +58,28 @@ body {
 .userName {
   margin-top: 39px;
   margin-left: 10px;
+}
+.carousel {
+  cursor: pointer;
+}
+.carousel .thumb img {
+    width: 100% !important;
+    height: 100% !important;
+}
+.carousel .slide img {
+    max-height: 500px;
+    min-height: 100%;
+    width: auto;
+}
+.kids .carousel .thumb img {
+    width: 100% !important;
+    height: 100% !important;
+}
+.kids .carousel .slide img, .bollywood .carousel .slide img, .latest .carousel .slide img{
+    max-height: 300px;
+    min-height: 100%;
+    width: auto;
+}
+@media only screen and (max-width: 768px) {
+  margin-left: 0 !important;
 }
