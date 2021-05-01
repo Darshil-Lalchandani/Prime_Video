@@ -7,7 +7,7 @@ const Bollywood = () => {
   const datarr = data.filter(item => item.bollywood === true)
   const dataBollywood = datarr.map(item => {
     return (
-      <div key={item.id}>
+      <div key={item.id} className='img-div'>
         <img src={item.img} alt={item.name}/>
       </div>
     )

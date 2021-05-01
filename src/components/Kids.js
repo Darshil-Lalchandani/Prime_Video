@@ -7,7 +7,7 @@ const Kids = () => {
   const datarr = data.filter(item => item.kids === true)
   const dataKids = datarr.map(item => {
     return (
-      <div key={item.id}>
+      <div key={item.id} className='img-div'>
         <img src={item.img} alt={item.name}/>
       </div>
     )

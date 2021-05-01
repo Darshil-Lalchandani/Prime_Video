@@ -7,7 +7,7 @@ const Latest = () => {
   const datarr = data.filter(item => item.latest === true)
   const dataLatest = datarr.map(item => {
     return (
-      <div key={item.id}>
+      <div key={item.id} className='img-div'>
         <img src={item.img} alt={item.name}/>
       </div>
     )
