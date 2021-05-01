@@ -4,6 +4,7 @@ import { FaBars, FaSistrix, FaUser } from 'react-icons/fa'
 
 const Navbar = () => {
   const [currentPage, setCurrentPage] = useState('home')
+  const [isLoggedIn, setisLoggedIn] = useState(true)
   return (
     <nav className="navbar navbar-expand-sm text-white fixed-top">
       <a className="navbar-brand ml-md-4 mt-2" href='/'>
@@ -33,10 +34,22 @@ const Navbar = () => {
             <div className="input-group-prepend">
               <div className="input-group-text text-white"><FaSistrix /></div>
             </div>
-          <input className="form-control mr-sm-2 mt-4 text-white search" type="search" placeholder="Search" aria-label="Search" />
+            <input className="form-control mr-sm-2 mt-4 text-white search" type="search" placeholder="Search" aria-label="Search" />
           </div>
-        <FaUser className="userIcon"/>
-        <p className="userName">Darshil</p>
+          <FaUser className="userIcon"/>
+          <p className="userName">
+             {isLoggedIn ? 'Darshil' : 'SignIn'}
+          </p>
+          <div className={window.innerWidth < 576 && 'dropright'}>
+          <button type="button" className="btn btn-secondary mt-4 dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span className="sr-only">Toggle Dropdown</span>
+          </button>
+          <div className="dropdown-menu dropdown-menu-right">
+            <a className="dropdown-item" href={isLoggedIn ? '/login' : '#'} onClick={() => setisLoggedIn(!isLoggedIn)}>
+              {isLoggedIn ? 'LogOut' : 'LogIn'}
+            </a>
+          </div>
+          </div>
         </form>
         </ul>
       </div>

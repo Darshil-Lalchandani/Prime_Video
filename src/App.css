@@ -8,27 +8,45 @@ body {
   background-color: #0f171e;
   max-height: 66px;
   padding-left: 0;
+  padding-right: 0;
+}
+.navbar-right {
+  padding-left: 0;
 }
 .nav-link {
   font-size: 17px;
   padding-bottom: 1px;
   padding-top: 1px;
 }
+.btn-secondary {
+  padding-left: 0;
+  border: none;
+}
+.form-inline .btn {
+  background: transparent;
+}
 @media only screen and (max-width:850px) {
   .navbar a, .navbar p{
     font-size: 14px;
   }
   .search {
-    max-width: 10px;
     padding-right: 0px;
   }
 }
-@media (max-width: 575px) {
-  .navbar-collapse
-    {
-        background-color:#0f171e;
-        min-width: 100vw;
-        margin-left: 0;
+@media (max-width: 576px) {
+  .navbar a, .navbar p{
+    font-size: 16px;
+  }
+  .navbar-collapse {
+      background-color:#0f171e;
+      min-width: 100vw;
+      margin-left: 0;
+    }
+    .search {
+      margin-top: 0 !important;
+    }
+    .input-group-text {
+      margin-top: 0 !important;
     }
 }
 .active {
@@ -53,7 +71,7 @@ body {
 .userIcon {
   font-size: 25px;
   margin-top: 20px;
-  margin-left: 10px;
+  margin-left: 3px;
 }
 .userName {
   margin-top: 39px;
@@ -82,4 +100,7 @@ body {
 }
 @media only screen and (max-width: 768px) {
   margin-left: 0 !important;
+}
+.form_container {
+  border-bottom: 2px solid white;
 }
